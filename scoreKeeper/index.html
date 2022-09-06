@@ -12,14 +12,21 @@
 
 <body>
     <!-- Bulma card-> #Example added -->
-    <!-- column-> basics&size added - container->columns->column-->
+    <!-- columns/grid system-> basics&size added - container->columns->column-->
     <div class="container">
         <div class="columns">
-            <div class="column">
+            <div class="column is-half is-offset-one-quarter">
                 <div class="card">
+                    <!-- to add image -->
+                    <div class="card-image">
+                        <figure class="image is-2by1">
+                            <img src="https://media.istockphoto.com/photos/ping-pong-or-table-tennis-background-with-rackets-picture-id503250996?k=20&m=503250996&s=612x612&w=0&h=tMaVlByxg1uq8XNBN8bJoid8Bed_tXfgAkold6fmy0w=" alt="">
+                        </figure>
+                    </div>
+                    <!-- to add image -->
                     <header class="card-header">
                         <p class="card-header-title">
-                            Component
+                            Ping Pong Score Keeper
                         </p>
                         <button class="card-header-icon" aria-label="more options">
                             <span class="icon">
@@ -28,17 +35,33 @@
                         </button>
                     </header>
                     <div class="card-content">
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                            <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-                            <br>
-                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                        <!-- bulma helpers-> typography -->
+                        <h1 class="is-size-1-desktop"><span id="p1Display">0</span> to <span id="p2Display">0</span>
+                        </h1>
+                        <p>Use the buttons below to keep score</p>
+                        <!-- bulma form->select -->
+                        <!-- and add label -->
+                        <label for="playto" class="label is-large is-inline">Playing To</label>
+                        <div class="select is-rounded">
+                            <select name="" id="playto">
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                            </select>
+
                         </div>
                     </div>
                     <footer class="card-footer">
-                        <a href="#" class="card-footer-item">Save</a>
-                        <a href="#" class="card-footer-item">Edit</a>
-                        <a href="#" class="card-footer-item">Delete</a>
+                        <!-- bulma Elements->Button -->
+                        <button id="p1Button" class="button is-primary card-footer-item">+1 Player One</button>
+                        <button id="p2Button" class="button is-info card-footer-item">+1 Player Two</button>
+                        <button id="reset" class="button is-danger card-footer-item">Reset</button>
                     </footer>
                 </div>
             </div>
@@ -46,25 +69,6 @@
     </div>
 
     <!-- Bulma card-->
-
-
-    <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
-
-    <select name="" id="playto">
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-    </select>
-    <button id="p1Button">+1 Player One</button>
-    <button id="p2Button">+1 Player Two</button>
-    <button id="reset">Reset</button>
-
     <script src="app.js"></script>
 </body>
 
